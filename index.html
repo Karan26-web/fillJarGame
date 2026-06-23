@@ -736,7 +736,7 @@ const LAYOUT = {
   // Red WatermelonJar (11 clip levels jarW0..jarW10) + two empty glass
   // containers that get juice drawn inside: wCont1 holds 4 cups, wCont2 holds 6.
   watermelon: {
-    jar: { left: 282, top: 232, width: 404, height: 524, depth: 20 },  // base ~756 on the table
+    jar: { left: 285.2, top: 259.01, width: 404, height: 524, depth: 20 },  // moved slightly down per alignment
     // juice surface (game y) of the full jar; lowers per scoop.
     surfaceFullY: 320, surfaceStepY: 33,
     juiceColor: 0xF23608,
@@ -759,7 +759,7 @@ const LAYOUT = {
   // ----- PINEAPPLE ROUND (empty glass jar + containers; juice drawn) ----
   // Cup counts are assumed (no Figma yet) — adjust cont1.cups / cont2.cups.
   pineapple: {
-    jar: { key: 'pineJar', left: 250, top: 250, width: 462, height: 509, depth: 20, drawJuice: true,
+    jar: { key: 'pineJar', left: 249.31, top: 263.19, width: 462, height: 509, depth: 20, drawJuice: true,
       profile: [[0.055,0.199,0.799],[0.11,0.175,0.82],[0.167,0.1,0.898],[0.222,0.052,0.944],[0.278,0.022,0.974],[0.333,0.006,0.989],[0.39,0,0.996],[0.445,0.002,0.996],[0.5,0.009,0.987],[0.555,0.022,0.974],[0.61,0.041,0.957],[0.667,0.065,0.933],[0.722,0.091,0.905],[0.778,0.123,0.872],[0.833,0.162,0.833],[0.89,0.21,0.786],[0.945,0.268,0.727],[1,0.483,0.513]] },
     juiceColor: 0xF5A300,   // rich pineapple gold — reads clearly through the glass
     cont1: { key: 'pineCont1', left: 1120, top: 490, width: 192, height: 296, depth: 30, cups: 5,
@@ -4246,17 +4246,17 @@ class TutorialScene extends Phaser.Scene {
   <!-- Visual layout debug overlay — loaded ONLY when the URL has ?debug=1.
        Purely additive: with no ?debug=1 this never loads and the game is
        unchanged. See debug.js and the DEBUG_MANIFEST above. -->
-  <script>
+  <!-- <script>
     if (/[?&]debug=1/.test(window.location.search)) {
       var s = document.createElement('script');
       s.src = 'debug.js';
       document.body.appendChild(s);
     }
-  </script>
+  </script> -->
 
   <!-- ===== TEMPORARY: "Next" button to step through the game's screens. =====
        Delete this whole block (button + script) to restore normal play. -->
-  <button id="tempNext" style="position:fixed;right:18px;bottom:18px;z-index:100000;
+  <!-- <button id="tempNext" style="position:fixed;right:18px;bottom:18px;z-index:100000;
     background:#39a06a;color:#fff;border:0;border-radius:10px;padding:13px 20px;
     font:700 17px sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.4);">Next &#9654;</button>
   <script>
@@ -4290,6 +4290,6 @@ class TutorialScene extends Phaser.Scene {
         }
       }, true);
     })();
-  </script>
+  </script> -->
 </body>
 </html>
